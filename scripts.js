@@ -15,13 +15,16 @@ const newMessage = () => {
         str = comment.toLowerCase()
     
      if (str.includes("xxx") || str.includes("viagra") === true) {
-         str = str.replace("xxx", "***")
-         str = str.replace("viagra", "***")
+        for (i = 0; i < str.length; i++) {
+            str = str.replace("xxx", "***")
+            str = str.replace("viagra", "***")
+        }
+        
+         message.innerHTML = str
+     } 
         message.innerHTML = str
      }
-         
-        message.innerHTML = str
-     }
+
      checkSpam()
 
      comment = ''
